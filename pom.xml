@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>amazon-reviewers-project</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>amazon-reviewers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>amazon</name>
-    <description>Demo project for Spring Boot</description>
+    <description>amazon-reviewers project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
