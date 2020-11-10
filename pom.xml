@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>amazon-reviewers-project</groupId>
-    <artifactId>amazon-reviewers</artifactId>
+    <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>amazon</name>
-    <description>amazon-reviewers project for Spring Boot</description>
+    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
@@ -62,6 +62,12 @@
             <groupId>com.opencsv</groupId>
             <artifactId>opencsv</artifactId>
             <version>5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
