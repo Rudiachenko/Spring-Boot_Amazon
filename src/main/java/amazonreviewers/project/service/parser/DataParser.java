@@ -4,5 +4,5 @@ import amazonreviewers.project.model.Comment;
 import java.util.List;
 
 public interface DataParser {
-    List<Comment> parseData();
+    List<Comment> parseData(String path);
 }

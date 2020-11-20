@@ -1,6 +1,9 @@
 package amazonreviewers.project.service;
 
 import amazonreviewers.project.exceptions.NoHeaderException;
+import amazonreviewers.project.service.mapper.DataMapper;
+import amazonreviewers.project.service.parser.DataParser;
+import amazonreviewers.project.service.parser.DataParserImpl;
 import amazonreviewers.project.service.reader.CsvFileReader;
 import amazonreviewers.project.service.reader.CsvFileReaderImpl;
 import org.junit.Assert;
@@ -21,9 +24,17 @@ public class CsvFileReaderImplTest {
     List<String> thirdList;
     List<List<String>> listForList;
 
-    public CsvFileReader createReader() {
+    public CsvFileReaderImpl createReader() {
         return new CsvFileReaderImpl();
    }
+
+    public DataMapper createDataMapper() {
+        return new DataMapper();
+    }
+
+    public DataParser createDataParser() {
+        return new DataParserImpl(createReader(), createDataMapper());
+    }
 
 
     @Before
@@ -54,7 +65,7 @@ public class CsvFileReaderImplTest {
 
     @Test(expected = NoHeaderException.class)
     public void fileWithoutHeader() {
-       createReader().readFile(LIST_WITHOUT_HEADER);
+        createDataParser().parseData(LIST_WITHOUT_HEADER);
     }
 
     @Test

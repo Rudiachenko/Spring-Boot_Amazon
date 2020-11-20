@@ -94,17 +94,17 @@ public class Comment {
 
     @Override
     public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", productId='" + productId + '\'' +
-                ", userId='" + userId + '\'' +
-                ", profileName='" + profileName + '\'' +
-                ", helpfulnessNumerator='" + helpfulnessNumerator + '\'' +
-                ", helpfulnessDenominator='" + helpfulnessDenominator + '\'' +
-                ", score='" + score + '\'' +
-                ", time='" + time + '\'' +
-                ", summary='" + summary + '\'' +
-                ", text='" + text + '\'' +
-                '}';
+        return "Comment{"
+                + "id=" + id
+                + ", productId='" + productId + '\''
+                + ", userId='" + userId + '\''
+                + ", profileName='" + profileName
+                + '\'' + ", helpfulnessNumerator='" + helpfulnessNumerator + '\''
+                + ", helpfulnessDenominator='" + helpfulnessDenominator + '\''
+                + ", score='" + score + '\''
+                + ", time='" + time + '\''
+                + ", summary='" + summary + '\''
+                + ", text='" + text + '\''
+                + '}';
     }
 }

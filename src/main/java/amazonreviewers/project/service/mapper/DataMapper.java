@@ -1,9 +1,8 @@
 package amazonreviewers.project.service.mapper;
 
 import amazonreviewers.project.model.Comment;
-import org.springframework.stereotype.Component;
-
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 @Component
 public class DataMapper {
