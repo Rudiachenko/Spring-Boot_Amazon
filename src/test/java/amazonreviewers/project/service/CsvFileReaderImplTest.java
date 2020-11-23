@@ -1,6 +1,8 @@
 package amazonreviewers.project.service;
 
 import amazonreviewers.project.exceptions.NoHeaderException;
+import amazonreviewers.project.service.reader.CsvFileReader;
+import amazonreviewers.project.service.reader.CsvFileReaderImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -48,11 +50,6 @@ public class CsvFileReaderImplTest {
     @Test(expected = NoSuchElementException.class)
     public void isEmptyFileTest() {
         createReader().readFile(PATH_EMPTY_LIST);
-    }
-
-    @Test(expected = NoHeaderException.class)
-    public void fileWithoutHeader() {
-       createReader().readFile(LIST_WITHOUT_HEADER);
     }
 
     @Test
