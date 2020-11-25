@@ -38,6 +38,7 @@ public class CsvFileReaderImplTest {
     List<String> secondList;
     List<String> thirdList;
     List<List<String>> listForList;
+    CommentDto commentDto;
 
     public CsvFileReaderImpl createReader() {
         return new CsvFileReaderImpl();
@@ -71,6 +72,18 @@ public class CsvFileReaderImplTest {
         listForList.add(firstList);
         listForList.add(secondList);
         listForList.add(thirdList);
+
+        commentDto = new CommentDto();
+        commentDto.setId(ID);
+        commentDto.setProductId(PRODUCT_ID);
+        commentDto.setUserId(USER_ID);
+        commentDto.setProfileName(PROFILE_NAME);
+        commentDto.setHelpfulnessNumerator(HELPFULNESS_NUMERATOR);
+        commentDto.setHelpfulnessDenominator(HELPFULNESS_DENOMINATOR);
+        commentDto.setScore(SCORE);
+        commentDto.setTime(TIME);
+        commentDto.setSummary(SUMMARY);
+        commentDto.setText(TEXT);
     }
 
     @Test(expected = NoSuchElementException.class)
@@ -92,17 +105,6 @@ public class CsvFileReaderImplTest {
 
     @Test
     public void parseIsOk() {
-        CommentDto commentDto = new CommentDto();
-        commentDto.setId(ID);
-        commentDto.setProductId(PRODUCT_ID);
-        commentDto.setUserId(USER_ID);
-        commentDto.setProfileName(PROFILE_NAME);
-        commentDto.setHelpfulnessNumerator(HELPFULNESS_NUMERATOR);
-        commentDto.setHelpfulnessDenominator(HELPFULNESS_DENOMINATOR);
-        commentDto.setScore(SCORE);
-        commentDto.setTime(TIME);
-        commentDto.setSummary(SUMMARY);
-        commentDto.setText(TEXT);
         List<CommentDto> commentDtos = createDataParser().parseData(TEST_PARSER);
         Assert.assertEquals(commentDto, commentDtos.get(OBJECT));
     }
