@@ -1,4 +1,4 @@
-package amazonreviewers.project.service;
+package amazonreviewers.project.service.reader;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CsvFileReaderImpl implements CsvFileReader {
 
     @Override

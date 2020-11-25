@@ -1,4 +1,4 @@
-package amazonreviewers.project.service;
+package amazonreviewers.project.service.reader;
 
 import java.util.List;
 
